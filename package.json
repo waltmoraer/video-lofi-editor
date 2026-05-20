@@ -1,0 +1,26 @@
+{
+  "name": "lofi-set-overlay-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone desktop tool for generating reusable transparent overlays for The Lofi SET rain and lofi videos.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "electron": "cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .",
+    "start": "npm run desktop",
+    "build": "vite build --base=./",
+    "preview": "npm run build && vite preview --host 127.0.0.1 --port 4173",
+    "desktop": "npm run build && electron ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "cross-env": "^10.0.0",
+    "electron": "^33.2.1",
+    "vite": "^6.0.5",
+    "wait-on": "^8.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {}
+}
